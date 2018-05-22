@@ -2,11 +2,14 @@
 
 all: runner checker
 
-checker:
-	gcc -o checker src/checker.cpp
+mkbin:
+	mkdir -p bin
 
-runner: 
-	gcc -o runner src/runner.cpp
+checker: mkbin
+	gcc -o bin/checker src/checker.cpp
+
+runner: mkbin
+	gcc -o bin/runner src/runner.cpp
 
 clean: 
-	rm runner checker
+	rm bin/*

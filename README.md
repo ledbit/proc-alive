@@ -22,19 +22,19 @@ Simply run
 ```
 make
 ```
-This will create two binaries, `runner` and `checker`
+This will create two binaries, `bin/runner` and `bin/checker`
 
 ## To test
 
 1. First, to emulate a daemon execute `runner` with a path to a location you have read-write access to and an amount of time for the `runner` to sleep
 ```
-./runner /tmp/mah-pipe 120
+./bin/runner /tmp/mah-pipe 120
 ```
 
 
 2. (in another window) Check the status of the `runner` by using the following command - feel free to kill the runner, reboot etc
 ```
-./checker /tmp/mah-pipe
+./bin/checker /tmp/mah-pipe
 ```
 
 
