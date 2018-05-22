@@ -1,5 +1,6 @@
 # proc-alive
-This is a sample project demonstrating how to check whether a process (usually a daemon) is alive or not as cheaply as possible, ie a single syscall. The idea relies on the behavior of [named pipes](http://man7.org/linux/man-pages/man7/fifo.7.html) (aka FIFO) - specifically the following part:
+
+This is a sample project (supporting this [blog post](https://blog.diag.ai/2018/05/21/single-syscall-process-status-check/)) demonstrating how to check whether a process (usually a daemon) is alive or not as cheaply as possible, ie a single syscall. The idea relies on the behavior of [named pipes](http://man7.org/linux/man-pages/man7/fifo.7.html) (aka FIFO) - specifically the following part:
 
 >A process can open a FIFO in nonblocking mode.  In this case, opening for read-only succeeds even if no one has opened on the write side yet and opening for write-only fails with ENXIO (no such device or address) unless the other end has already been opened.
 
