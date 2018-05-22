@@ -13,7 +13,7 @@ Let's define the following two processes:
 1. runner - at startup, creates and/or opens the pipe for read-only in non-blocking mode (O_RDONLY | O_NONBLOCK). Cleanup is not strictly necessary as the OS will detach the process from the pipe on exit (clean or not)
 1. checker - attempt to open the file in write-only in non-blocking mode (O_WRONLY | O_NONBLOCK) - this will only succeed if the pipe exists **and** there is at least one reader on the pipe
 
-I've built this in C++ but the concept is useful in other languages as well, as long as they provide you access to pipes, e.g. go, python, node etc
+I've built this in C/C++ but the concept is useful in other languages as well, as long as they provide you access to pipes, e.g. go, python, node etc. Check out [this project](https://github.com/coccyx/go-procalive) for a GO verion.
 
 # How to
 
