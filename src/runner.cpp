@@ -33,7 +33,7 @@ int main( int argc, char *argv[])
     printf("opened fifo for read: path=%s\n", myfifo);
 
     int sleepSecs = atoi(argv[2]);
-    sleepSecs = sleepSecs < 0 ? 120 : sleepSecs;
+    sleepSecs = sleepSecs < 1 ? 120 : sleepSecs;
 
     printf("sleeping for %d seconds ...\n", sleepSecs);
     sleep(sleepSecs);
